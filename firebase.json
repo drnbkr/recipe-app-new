@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/recipe-app-new",
+    "public": "dist/recipe-app-new/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -10,6 +10,17 @@
       {
         "source": "**",
         "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|html)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
       }
     ]
   }
